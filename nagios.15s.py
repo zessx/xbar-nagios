@@ -32,8 +32,6 @@ else:
     unknown = int(re.search('>(\d+)\sUnknown<', data, re.MULTILINE)[1])
     ok = int(re.search('>(\d+)\sOk<', data, re.MULTILINE)[1])
     
-    # critical = warning = unknown = ok = 12
-    
     services = ok + warning + unknown + critical
     color = 'green'
     if critical > 0:
